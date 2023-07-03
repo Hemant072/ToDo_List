@@ -1,4 +1,7 @@
 //jshint esversion:6
+if(process.env.NODE_ENV !== "production") {
+  require('dotenv').config()
+}
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -12,7 +15,7 @@ app.use(express.static("public"));
 
 app.set('view engine', 'ejs');
 
-mongoose.connect("mongodb+srv://Hemant:Hemant0607@cluster0.tdj3twx.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect(process.env.DB_URL);
 
 const itemSchema = {
     name: String
@@ -136,8 +139,6 @@ app.get("/:categoryName" , function(req, res) {
 });
 
 
-
- 
 
 app.get("/work", function(req,res){
     res.render("list", {listTitle: "Work List", newListItems : workItems})
