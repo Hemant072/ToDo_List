@@ -1,0 +1,141 @@
+/* General Styles */
+
+html {
+  background-color: #E4E9FD;
+  background-image: linear-gradient(30deg, #2C2C54 50%, #E4E9FD 50%);
+  min-height: 1000px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+
+#heading {
+  background-color: #2C2C54;
+  text-align: center;
+}
+
+/* Todo Items */
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+  transition: background-color 0.3s ease;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+.item:hover {
+  background-color: #F5F5F5;
+}
+
+input:checked + p {
+  text-decoration: line-through;
+  text-decoration-color: #2C2C54;
+  opacity: 0.7;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #2C2C54;
+  outline: none;
+  vertical-align: middle;
+  position: relative;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #2C2C54;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "\2713";
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+/* Add Task Form */
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+  color: #00204a;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #2C2C54;
+}
+
+::placeholder {
+  color: #2C2C54;
+  opacity: 0.7;
+}
+
+/* Delete Button */
+
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #2C2C54;
+  color: #fff;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #466d97;
+}
+
+/* Footer */
+
+footer {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
